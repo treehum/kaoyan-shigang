@@ -325,3 +325,27 @@ a:hover { text-decoration: underline; }
   .content h2 { page-break-after: avoid; }
   .content table, .content blockquote, .content pre { page-break-inside: avoid; }
 }
+
+/* ---------- 故事版：章节目录 ---------- */
+.chapters { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 8px; margin: 18px 0 6px; }
+.chapters a {
+  display: flex; gap: 10px; align-items: baseline;
+  padding: 11px 14px; border: 1px solid var(--line); border-radius: 9px;
+  background: var(--card); color: var(--ink); font-size: 14.5px;
+}
+.chapters a:hover { border-color: var(--accent); text-decoration: none; }
+.chapters b { color: var(--accent); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; }
+.chapters span { margin-left: auto; color: var(--muted); font-size: 12px; }
+
+/* ---------- 背诵要点区块 ---------- */
+.recite {
+  margin: 52px 0 8px; padding: 26px 28px 16px;
+  background: var(--card); border: 1px solid var(--line);
+  border-left: 4px solid var(--accent); border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+.recite h2 { margin: 0 0 12px; padding-left: 0; font-size: 20px; }
+.recite h2::before { display: none; }
+.recite ol { margin: 0 0 6px; padding-left: 1.6em; }
+.recite li { margin: 10px 0; line-height: 1.85; }
+.recite li::marker { color: var(--accent); font-weight: 700; }
